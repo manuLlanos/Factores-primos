@@ -37,7 +37,3 @@ function getPrimeFactors(num) {
 
     return factors.sort((a, b) => a - b);
 }
-
-for (let i = 1; i < 101; i++) {
-    console.log(`${i} -> ${getPrimeFactors(i)}`);
-}
