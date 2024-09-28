@@ -37,3 +37,25 @@ function getPrimeFactors(num) {
 
     return factors.sort((a, b) => a - b);
 }
+
+function formatFactorList(arr) {
+    let counterObj = {};
+
+    for (let value of arr) {
+        if (value in counterObj) counterObj[value]++;
+        else counterObj[value] = 1;
+    }
+
+    let formatedString = "";
+    for (const base in counterObj) {
+        let exp = counterObj[base];
+
+        if (exp == 1) formatedString += `${base}`;
+        else formatedString += `${base}^${counterObj[base]}`;
+
+        formatedString += " * ";
+    }
+    formatedString = formatedString.slice(0, -3);
+
+    return formatedString;
+}
