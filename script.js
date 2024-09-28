@@ -16,8 +16,8 @@ function isPrime(num) {
 
 function getPrimeFactors(num) {
     if (num <= 0) return null;
-    if (num == 1) return 1;
-    if (isPrime(num)) return num;
+    if (num == 1) return [1];
+    if (isPrime(num)) return [num];
 
     let factors = [];
     let value = num;
