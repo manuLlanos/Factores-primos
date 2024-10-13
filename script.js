@@ -59,3 +59,13 @@ function formatFactorList(arr) {
 
     return formatedString;
 }
+
+let primeInput = document.querySelector("#input-prime");
+let primeButton = document.querySelector("#btn-prime");
+let primeResult = document.querySelector("#result-prime");
+
+primeButton.addEventListener("click", () => {
+    let input = primeInput.value;
+
+    primeResult.textContent = input + (isPrime(input) ? " es primo" : " no es primo");
+})
