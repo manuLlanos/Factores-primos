@@ -61,7 +61,7 @@ function formatFactorList(arr) {
 }
 
 let primeInput = document.querySelector("#input-prime");
-let primeButton = document.querySelector("#btn-prime");
+let primeButton = document.querySelector("#btn-calculate");
 let primeResult = document.querySelector("#result-prime");
 
 primeButton.addEventListener("click", () => {
