@@ -65,7 +65,7 @@ let primeButton = document.querySelector("#btn-calculate");
 let primeResult = document.querySelector("#result-prime");
 let factorsResult = document.querySelector("#result-factors");
 
-primeButton.addEventListener("click", () => {
+function calculate() {
     let input = primeInput.value;
 
     if (isPrime(input)) {
@@ -77,5 +77,9 @@ primeButton.addEventListener("click", () => {
         primeResult.textContent = `${input} no es primo`;
         factorsResult.textContent = `${input} = ${factorStr}`;
     }
+}
 
+primeInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") calculate();
 })
+primeButton.addEventListener("click", calculate);
